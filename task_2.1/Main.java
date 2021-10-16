@@ -12,17 +12,11 @@
 public class Main {
     public static void main(String[] args) {
         //напишите тут ваш код
-        String[] names = {"Мама","Мыла","Раму"};
-        int a = names.length;
-//        String stroka;
-        
-        for (int i=0; i<a; i++)
-            System.out.print(names[i]);
-
-//        for (int j=1; j<a; j++)
-//            System.out.print(names[j]);
-
-//        for (int k=2; k<a; k++)
-//            System.out.print(names[k]);
+        String[] mass = {"Мама","Мыла","Раму"};
+        for (int i=0; i< mass.length; i++)
+            for (int j=0; j< mass.length; j++)
+                for (int k=0; k< mass.length; k++)
+                    if (i!=j && j!=k && k!=i)
+                    System.out.println(mass[i]+mass[j]+mass[k]);
     }
 }
