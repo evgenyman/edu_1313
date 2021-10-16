@@ -6,13 +6,17 @@
 public class Main {
     public static void main(String[] args) {
         //напишите тут ваш код
-        int[] mass = {1,2,3,4,4,5};
+        int[] mass = {10,20,30,40,40,50};
         int a = mass[0];
         for (int i = 1; i < mass.length; i++) {
-            if (a==mass[i])
-                System.out.println("Есть два подряд одинаковых числа! Это "+a);
-            else
-                System.out.println(mass[i]);
+            System.out.println("Считали элемент "+i+" он равен "+mass[i]);
+            if (a==mass[i]) {
+                System.out.println("Да. Есть два подряд одинаковых числа! Это " + a);
+                break;
+            }
+            if (i==mass.length-1) {
+                System.out.println("Нет. Массив окончен. Одинаковых подяд чисел нет");
+            }
             a = mass[i];
         }
     }
