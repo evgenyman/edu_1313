@@ -19,9 +19,9 @@ public class Main {
 
     public static int min(int a, int b, int c) {
         //напишите тут ваш код
-        System.out.println("Разбираем строку : "+a+" "+b+" "+c);
+        //System.out.println("Разбираем строку : "+a+" "+b+" "+c);
         if (a<=b)
-            if (a<=b)
+            if (a<=c)
                 return a;
             else if (b<=c)
                 return b;
