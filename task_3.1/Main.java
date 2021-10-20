@@ -23,10 +23,8 @@ public class Main {
         if (a<=b)
             if (a<=b)
                 return a;
-            else
+            else if (b<=c)
                 return b;
-        else if (b<=c)
-            return b;
-        return c;
+            return c;
     }
 }
