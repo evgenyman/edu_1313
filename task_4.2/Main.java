@@ -14,22 +14,28 @@
 
 public class Main {
     public static void main(String[] args) {
-        Dog dog1 = new Dog("Тузик",3);
+        Dog dog = new Dog();
+        System.out.println("Первоначальное имя собаки: "+dog.getName()+" \nВозраст собаки: "+dog.getAge());
+        dog.setName("Серега");
+        dog.setAge(4);
+        System.out.println("Новое имя собаки: "+dog.getName()+" \nНовый возраст собаки: "+dog.getAge());
+
+/*        Dog dog1 = new Dog();
         System.out.println("Первоначальное имя собаки: "+dog1.getName()+" \nВозраст собаки: "+dog1.getAge());
-        dog1.setName("Серега");
-        dog1.setAge(4);
-        System.out.println("Новое имя собаки: "+dog1.getName()+" \nНовый возраст собаки: "+dog1.getAge());
+        dog1.setName("Жучка");
+        dog1.setAge(5);
+        System.out.println("Новое имя собаки: "+dog1.getName()+" \nНовый возраст собаки: "+dog1.getAge());*/
     }
 }
 
 class Dog {
     //напишите тут ваш код
-    private String name;
-    private int age;
-    Dog(String name, int age){
+    private String name = "Тузик";
+    private int age = 3;
+/*    Dog(String name, int age){ // если нет конструктора, то каждый новый dog всегда создается с первоначальными параметрами
         this.name = name;
         this.age = age;
-   }
+   }*/
 
     public String getName() {
         return name;
