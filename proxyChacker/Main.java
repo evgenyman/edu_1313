@@ -21,11 +21,10 @@ public class Main {
                     String ip = resultArray[0];
                     int port = Integer.parseInt(resultArray[1]);
                     checkProxy(ip, port); // здесь мы имеем строку "ip:port" !
-                    if (goodIP=true) mass[ii] = ip;
-                        else System.out.println("Добавили в массив :"+mass[ii]+" под номером "+ii);
-                        ii = ii + 1;
-
-                    System.out.println(resultIp);
+//                    if (goodIP=true) mass[ii] = ip;
+//                        else System.out.println("Добавили в массив :"+mass[ii]+" под номером "+ii);
+//                        ii = ii + 1;
+//                    System.out.println(resultIp);
                     resultIp = "";
                 } else if (i == 9) {
                     resultIp += ":";
@@ -50,7 +49,7 @@ public class Main {
                             connection.getInputStream()));
 
             System.out.println("ip: " + ip + ":" + port + " рабочий");
-            saveFile(ip);
+            saveFile(ip+":"+port+"/n");
 //            return true;
 
             in.close();
@@ -64,7 +63,7 @@ public class Main {
 
     public static void saveFile(String ip) throws IOException {
         String str=ip;
-        FileOutputStream fos = new FileOutputStream("C:/java/good_ip.txt");
+        FileOutputStream fos = new FileOutputStream("C:/java/good_ip.txt",true);
         byte[] buffer = str.getBytes(StandardCharsets.UTF_8);
         fos.write(buffer);
         System.out.println("Записали good_ip.txt");
