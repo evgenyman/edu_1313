@@ -20,11 +20,8 @@ public class Main {
                     String[] resultArray = resultIp.split(":");
                     String ip = resultArray[0];
                     int port = Integer.parseInt(resultArray[1]);
-                    checkProxy(ip, port); // здесь мы имеем строку "ip:port" !
-//                    if (goodIP=true) mass[ii] = ip;
-//                        else System.out.println("Добавили в массив :"+mass[ii]+" под номером "+ii);
-//                        ii = ii + 1;
-//                    System.out.println(resultIp);
+                    checkProxy(ip, port); 
+
                     resultIp = "";
                 } else if (i == 9) {
                     resultIp += ":";
@@ -32,13 +29,13 @@ public class Main {
                     resultIp += (char) i;
                 }
             }
-//            saveFile();
+
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public static void checkProxy(String ip, int port) {      // это старый метод типа void 
+    public static void checkProxy(String ip, int port) {
         try {
             Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress(ip, port));
             URL url = new URL("https://vozhzhaev.ru/test.php");
@@ -59,17 +56,20 @@ public class Main {
     }
 
     public static void saveFile(String ip) throws IOException {
+//        Вариант 3
         String str=ip;
         FileWriter writer = new FileWriter("C://java/good_ip.txt",true);
         writer.write(str+"\n");
         writer.close();
 
+//        Вариант 2
 //        String str=ip;
 //        String lineSeparator = System.getProperty("line.separator");
 //        FileWriter writer = new FileWriter("C://java/good_ip.txt",true);
 //        writer.write(str+lineSeparator);
 //        writer.close();
 
+//        Вариант 1
 //        String str=ip;
 //        FileOutputStream fos = new FileOutputStream("C://java/good_ip.txt",true);
 //        byte[] buffer = str.getBytes(StandardCharsets.UTF_8);
