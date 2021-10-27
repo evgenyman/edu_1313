@@ -18,7 +18,7 @@ public class MultiThread1 {
                     String ip = resultArray[0];
                     int port = Integer.parseInt(resultArray[1]);
 
-/*                    // Метод 1
+                    // Способ 1
                     class Task extends Thread{
                         String ip;
                         int port;
@@ -36,9 +36,9 @@ public class MultiThread1 {
 
                     Task task = new Task(ip,port);
                     task.start();
-                    // конец метода 1*/
+                    // конец способа 1
 
-                    checkProxy(ip, port);
+//                    checkProxy(ip, port);
 
                     resultIp = "";
                 } else if (i == 9) {
