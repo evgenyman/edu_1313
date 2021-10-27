@@ -60,10 +60,15 @@ public class Main {
 
     public static void saveFile(String ip) throws IOException {
         String str=ip;
-        String lineSeparator = System.getProperty("line.separator");
         FileWriter writer = new FileWriter("C://java/good_ip.txt",true);
-        writer.write(str+lineSeparator);
+        writer.write(str+"\n");
         writer.close();
+
+//        String str=ip;
+//        String lineSeparator = System.getProperty("line.separator");
+//        FileWriter writer = new FileWriter("C://java/good_ip.txt",true);
+//        writer.write(str+lineSeparator);
+//        writer.close();
 
 //        String str=ip;
 //        FileOutputStream fos = new FileOutputStream("C://java/good_ip.txt",true);
