@@ -22,7 +22,7 @@ public class MultiThread {
             @Override
             public void run() {
                 for (int i = 0; i < 100; i++) {
-                    System.out.println("Пылесосить выполнена на "+i+"%");
+                    System.out.println("Пылесосить  выполнена на "+i+"%");
                 }
             }
         });
