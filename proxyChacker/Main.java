@@ -38,7 +38,7 @@ public class Main {
         }
     }
 
-    public static void checkProxy(String ip, int port) {      // это старый метод типа void
+    public static void checkProxy(String ip, int port) {      // это старый метод типа void 
         try {
             Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress(ip, port));
             URL url = new URL("https://vozhzhaev.ru/test.php");
