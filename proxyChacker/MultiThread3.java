@@ -17,7 +17,8 @@ public class MultiThread3 {
                     String[] resultArray = resultIp.split(":");
                     String ip = resultArray[0];
                     int port = Integer.parseInt(resultArray[1]);
-
+                     
+                    // Начало способа 3
                     Thread thread = new Thread(new Runnable() {
                         @Override
                         public void run() {
@@ -25,6 +26,7 @@ public class MultiThread3 {
                         }
                     });
                     thread.start();
+                    // Конец способа 3
 
                     resultIp = "";
                 } else if (i == 9) {
@@ -59,21 +61,21 @@ public class MultiThread3 {
     }
 
     public static void saveFile(String ip) throws IOException {
-//        Вариант 3
+//        Вывод в файл Вариант 3
         String str=ip;
         FileWriter writer = new FileWriter("C://java/good_ip.txt",true);
         writer.write(str+"\n");
         writer.flush();
         writer.close();
 
-//        Вариант 2
+//        Вывод в файл Вариант 2
 //        String str=ip;
 //        String lineSeparator = System.getProperty("line.separator");
 //        FileWriter writer = new FileWriter("C://java/good_ip.txt",true);
 //        writer.write(str+lineSeparator);
 //        writer.close();
 
-//        Вариант 1
+//        Вывод в файл Вариант 1
 //        String str=ip;
 //        FileOutputStream fos = new FileOutputStream("C://java/good_ip.txt",true);
 //        byte[] buffer = str.getBytes(StandardCharsets.UTF_8);
