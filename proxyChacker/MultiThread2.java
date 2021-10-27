@@ -72,21 +72,21 @@ public class MultiThread2 {
     }
 
     public static void saveFile(String ip) throws IOException {
-//        Вариант 3
+//        Вывод в файл Вариант 3
         String str=ip;
         FileWriter writer = new FileWriter("C://java/good_ip.txt",true);
         writer.write(str+"\n");
         writer.flush();
         writer.close();
 
-//        Вариант 2
+//        Вывод в файл Вариант 2
 //        String str=ip;
 //        String lineSeparator = System.getProperty("line.separator");
 //        FileWriter writer = new FileWriter("C://java/good_ip.txt",true);
 //        writer.write(str+lineSeparator);
 //        writer.close();
 
-//        Вариант 1
+//        Вывод в файл Вариант 1
 //        String str=ip;
 //        FileOutputStream fos = new FileOutputStream("C://java/good_ip.txt",true);
 //        byte[] buffer = str.getBytes(StandardCharsets.UTF_8);
