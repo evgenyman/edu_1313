@@ -38,7 +38,6 @@ public class Main {
         }
     }
 
-//    public static boolean checkProxy(String ip, int port) {     // перевели метод в тип boolean, чтобы вернул goodIP (true или false)
     public static void checkProxy(String ip, int port) {      // это старый метод типа void
         try {
             Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress(ip, port));
@@ -49,23 +48,28 @@ public class Main {
                             connection.getInputStream()));
 
             System.out.println("ip: " + ip + ":" + port + " рабочий");
-            saveFile(ip+":"+port+"/n");
-//            return true;
+            saveFile(ip+":"+port);
 
             in.close();
 
         } catch (Exception e) {
             System.out.println("ip: " + ip + ":" + port + " НЕ РАБОТАЕТ");
-//            return false;
 
         }
     }
 
     public static void saveFile(String ip) throws IOException {
         String str=ip;
-        FileOutputStream fos = new FileOutputStream("C:/java/good_ip.txt",true);
-        byte[] buffer = str.getBytes(StandardCharsets.UTF_8);
-        fos.write(buffer);
+        String lineSeparator = System.getProperty("line.separator");
+        FileWriter writer = new FileWriter("C://java/good_ip.txt",true);
+        writer.write(str+lineSeparator);
+        writer.close();
+
+//        String str=ip;
+//        FileOutputStream fos = new FileOutputStream("C://java/good_ip.txt",true);
+//        byte[] buffer = str.getBytes(StandardCharsets.UTF_8);
+//        fos.write(buffer);
+
         System.out.println("Записали good_ip.txt");
     }
 }
